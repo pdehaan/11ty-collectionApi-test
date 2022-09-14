@@ -1,0 +1,25 @@
+<ol data-tag="animal">
+  <li>oNe -- tags=["animal"]</li>
+
+  <li>ThReE -- tags=["animal","mineral"]</li>
+</ol>
+
+<ol data-tag="vegetable">
+  <li>tWo -- tags=["vegetable"]</li>
+</ol>
+
+<ol data-tags="animal,mineral">
+  <li>ThReE -- tags=["animal","mineral"]</li>
+</ol>
+
+<ol data-glob="src/posts/*.njk">
+  <li>oNe -- tags=["animal"]</li>
+
+  <li>tWo -- tags=["vegetable"]</li>
+
+  <li>ThReE -- tags=["animal","mineral"]</li>
+</ol>
+
+<ol data-where="author == Jane">
+  <li>tWo -- tags=["vegetable"] -- author=Jane</li>
+</ol>

@@ -1,0 +1,33 @@
+---
+title: Index
+---
+
+<ol data-tag="animal">
+  {% for post in collections.liveColl.getFilteredByTag("animal") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
+  {% endfor %}
+</ol>
+
+<ol data-tag="vegetable">
+  {% for post in collections.liveColl.getFilteredByTag("vegetable") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
+  {% endfor %}
+</ol>
+
+<ol data-tags="animal,mineral">
+  {% for post in collections.liveColl.getFilteredByTags("animal", "mineral") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
+  {% endfor %}
+</ol>
+
+<ol data-glob="src/posts/*.njk">
+  {% for post in collections.liveColl.getFilteredByGlob("src/posts/*.njk") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
+  {% endfor %}
+</ol>
+
+<ol data-where="author == Jane">
+  {% for post in collections.liveColl.getFilteredByGlob("src/posts/*.njk") | where("data.author", "Jane") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }} -- author={{ post.data.author }}</li>
+  {% endfor %}
+</ol>
