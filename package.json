@@ -1,17 +1,25 @@
 {
   "name": "11ty-collectionapi-test",
+  "description": "This is ~~probably~~ a very bad idea. If you're using Nunjucks templating, you can do some questionable life choices in your .eleventy.js config file and create dynamic collections using this nonsense:",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Peter deHaan <peter@deseloper.com>",
-  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-collectionApi-test/issues"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "lodash.get": "^4.4.2"
+  },
+  "homepage": "https://github.com/pdehaan/11ty-collectionApi-test#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-collectionApi-test.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
