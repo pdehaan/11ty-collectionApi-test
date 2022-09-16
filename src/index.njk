@@ -4,7 +4,7 @@ title: Index
 
 <ol data-tag="animal">
   {% for post in collections.liveColl.getFilteredByTag("animal") %}
-  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
+  <li>{{ post.data.title }} -- tags={{ post.data.tags }}</li>
   {% endfor %}
 </ol>
 
@@ -29,5 +29,11 @@ title: Index
 <ol data-where="author == Jane">
   {% for post in collections.liveColl.getFilteredByGlob("src/posts/*.njk") | where("data.author", "Jane") %}
   <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }} -- author={{ post.data.author }}</li>
+  {% endfor %}
+</ol>
+
+<ol data-tag="dynamic">
+  {% for post in collections.liveColl.getFilteredByTag("dynamic") %}
+  <li>{{ post.data.title }} -- tags={{ post.data.tags | dump | safe }}</li>
   {% endfor %}
 </ol>
